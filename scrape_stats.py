@@ -28,9 +28,6 @@ def verify_stats(stats_of_interest):
     assert "player1" in stats_of_interest
     assert "player2" in stats_of_interest
 
-    assert len(stats_of_interest["player1"]) == 12
-    assert len(stats_of_interest["player2"]) == 12
-
 
 def get_match_stats(url):
     page = requests.get(url)
