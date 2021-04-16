@@ -6,10 +6,22 @@ import requests
 # https://itp.infosys-platforms.com/api/rg/stats-plus/v1/keystats/year/2020/eventId/520/matchId/SM076
 
 
+def get_percentage_from_str(stat_str):
+    return stat_str.split("%")[0].split("(")[1]
+
+
 def fill_match_stat_for_player(stat_dict, player_index, stats_array):
-    stats_array[("player" + player_index)][stat_dict["name"]] = stat_dict[
-        "player" + player_index
-    ]
+    stat_name = stat_dict["name"]
+    raw_value = stat_dict["player" + player_index]
+    player_dict = stats_array[("player" + player_index)]
+    if stat_name == "Break Points Won":
+        player_dict[stat_name] = raw_value.split("/")[0]
+    elif stat_name == "Receiving Points Won":
+        player_dict["Receiving Points Won Pct"] = get_percentage_from_str(raw_value)
+    elif stat_name == "Win On 2nd Serve":
+        player_dict["Win On 2nd Serve Pct"] = get_percentage_from_str(raw_value)
+    else:
+        player_dict[stat_name] = raw_value
 
 
 def fill_match_stat(stat_dict, stats_array):
