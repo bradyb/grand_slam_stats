@@ -1,5 +1,5 @@
-Aces,Break Points Won,Double Faults,First Serve,Name,Net Points Won,Receiving Points Won,Total Points Won,Unforced Errors,Win On 1st Serve,Win On 2nd Serve,Winners,Max Speed,1st Serve Average Speed,2nd Serve Average Speed
-5,8/22 (36%),6,102/153 (67%),N.DJOKOVIC,30/40 (75%),74/168 (44%),172,50,74/102 (73%),24/51 (47%),56,202,186,144
-7,4/15 (27%),5,113/168 (67%),S.TSITSIPAS,24/41 (59%),55/153 (36%),149,56,67/113 (59%),27/55 (49%),52,205,185,154
-2,3/12 (25%),3,50/84 (60%),D.SCHWARTZMAN,15/23 (65%),43/117 (37%),87,48,31/50 (62%),13/34 (38%),24,180,158,134
-3,6/9 (67%),0,81/117 (69%),R.NADAL,17/24 (71%),40/84 (48%),114,34,55/81 (68%),19/36 (53%),38,195,183,142
+Aces,Break Points Won,Double Faults,First Serve,Name,Net Points Won,Receiving Points Won Pct,Total Points Won,Unforced Errors,Win On 1st Serve,Win On 2nd Serve Pct,Winners,Max Speed,1st Serve Average Speed,2nd Serve Average Speed
+5,8,6,102/153 (67%),N.DJOKOVIC,30/40 (75%),44,172,50,74/102 (73%),47,56,202,186,144
+7,4,5,113/168 (67%),S.TSITSIPAS,24/41 (59%),36,149,56,67/113 (59%),49,52,205,185,154
+2,3,3,50/84 (60%),D.SCHWARTZMAN,15/23 (65%),37,87,48,31/50 (62%),38,24,180,158,134
+3,6,0,81/117 (69%),R.NADAL,17/24 (71%),48,114,34,55/81 (68%),53,38,195,183,142

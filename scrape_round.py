@@ -45,11 +45,15 @@ def write_match_stats_to_csv(match_stats, csv_file_name):
             writer.writerow(match_stat["player2"])
 
 
+def write_round_to_csv(round_ids_file_name):
+    match_stats = scrape_round("match_ids/french2020/" + round_ids_file_name)
+    write_match_stats_to_csv(
+        match_stats, "csv/" + round_ids_file_name.split(".")[0] + ".csv"
+    )
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("matches_file", help="File with match ids to scrap.")
+    parser.add_argument("round_ids", help="File with match ids from a round to scrape.")
     args = parser.parse_args()
-    match_stats = scrape_round("match_ids/french2020/" + args.matches_file)
-    write_match_stats_to_csv(
-        match_stats, "csv/" + args.matches_file.split(".")[0] + ".csv"
-    )
+    write_round_to_csv(args.round_ids)
