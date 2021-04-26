@@ -6,6 +6,8 @@ BASE_URL = "https://itp.infosys-platforms.com/api/rg/stats-plus/v1/keystats/year
 CSV_COLUMNS = [
     "Aces",
     "Break Points Won",
+    "Break Points Saved",
+    "Break Points Lost",
     "Double Faults",
     "First Serve",
     "Name",
@@ -19,6 +21,7 @@ CSV_COLUMNS = [
     "Max Speed",
     "1st Serve Average Speed",
     "2nd Serve Average Speed",
+    "Break Points Won Raw",
 ]
 
 
