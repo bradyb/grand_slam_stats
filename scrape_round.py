@@ -8,6 +8,7 @@ CSV_COLUMNS = [
     "Break Points Won",
     "Break Points Saved",
     "Break Points Lost",
+    "Break Points Won Raw",
     "Double Faults",
     "First Serve",
     "Name",
@@ -21,7 +22,6 @@ CSV_COLUMNS = [
     "Max Speed",
     "1st Serve Average Speed",
     "2nd Serve Average Speed",
-    "Break Points Won Raw",
 ]
 
 
