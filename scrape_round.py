@@ -50,10 +50,10 @@ def write_match_stats_to_csv(match_stats, csv_file_name):
             writer.writerow(match_stat["player2"])
 
 
-def write_round_to_csv(round_ids_file_name):
+def write_round_to_csv(round_ids_file_name, tournament_name):
     match_stats = scrape_round("match_ids/french2020/" + round_ids_file_name)
     write_match_stats_to_csv(
-        match_stats, "csv/" + round_ids_file_name.split(".")[0] + ".csv"
+        match_stats, "csv/" + tournament_name + "/" + round_ids_file_name.split(".")[0] + ".csv"
     )
 
 
