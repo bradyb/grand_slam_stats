@@ -41,8 +41,10 @@ def fill_match_stat_for_player(stat_dict, stats_array):
             player_dict["Break Points Saved"] = int(opponent_raw_value.split("/")[1].split(" ")[0]) - int(opponent_break_points_won)
             player_dict["Break Points Lost"] = opponent_break_points_won
         elif stat_name == "Receiving Points Won":
+            player_dict[stat_name] = raw_value
             player_dict["Receiving Points Won Pct"] = get_percentage_from_str(raw_value)
         elif stat_name == "Win On 2nd Serve":
+            player_dict[stat_name] = raw_value
             player_dict["Win On 2nd Serve Pct"] = get_percentage_from_str(raw_value)
         else:
             player_dict[stat_name] = raw_value
