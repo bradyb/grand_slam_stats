@@ -21,7 +21,7 @@ def order_players_by_stat(tournament_name, stat_name):
 
 def write_ranking_to_csv(tournament_name, stat_name):
     sorted_dict = order_players_by_stat(tournament_name, stat_name)
-    csv_file_name = "rankings/" + stat_name + "_ranking.csv"
+    csv_file_name = "rankings/" + tournament_name + "/" + stat_name + "_ranking.csv"
     with open(csv_file_name, "w") as csv_file:
         writer = csv.writer(csv_file)
         for key, value in sorted_dict.items():
