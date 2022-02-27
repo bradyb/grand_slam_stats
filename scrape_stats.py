@@ -71,9 +71,12 @@ def get_match_stats(url):
     page = requests.get(url)
     json = page.json()
 
+    if not json["players"]:
+        return None
+
     players = {
-        "player1": json["players"][0]["player1name"],
-        "player2": json["players"][1]["player1name"],
+        "player1": json["players"][0]["player1Name"],
+        "player2": json["players"][1]["player1Name"],
     }
     pprint.pprint(players)
 

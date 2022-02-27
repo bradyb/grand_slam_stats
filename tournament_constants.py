@@ -2,7 +2,10 @@ NUMBER_OF_ROUNDS = 7
 
 PLAYER_NUMBERS = ["1", "2"]
 
-BASE_URL = "https://itp.infosys-platforms.com/api/rg/stats-plus/v1/keystats/year/2020/eventId/520/matchId/"  # french2020
+# BASE_URL = "https://itp.infosys-platforms.com/api/rg/stats-plus/v1/keystats/year/2020/eventId/520/matchId/"  # french2020
+BASE_URL = "https://itp-rg-sls.infosys-platforms.com/prod/api/stats-plus/v1/keystats/year/2021/eventId/520/matchId/" #french2021
+
+
 
 CSV_COLUMNS = [
     "Aces",

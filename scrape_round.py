@@ -1,5 +1,7 @@
 import argparse
+from cmath import sin
 import csv
+from tokenize import single_quoted
 import scrape_stats
 import tournament_constants
 
@@ -14,7 +16,9 @@ def scrape_round(match_ids_file_name):
 
     match_stats = []
     for match_id in match_ids:
-        match_stats.append(scrape_stats.get_match_stats(get_url(match_id)))
+        single_match_stats = scrape_stats.get_match_stats(get_url(match_id))
+        if single_match_stats:
+            match_stats.append(single_match_stats)
     return match_stats
 
 
@@ -28,7 +32,7 @@ def write_match_stats_to_csv(match_stats, csv_file_name):
 
 
 def write_round_to_csv(round_ids_file_name, tournament_name):
-    match_stats = scrape_round("match_ids/french2020/" + round_ids_file_name)
+    match_stats = scrape_round("match_ids/french2021/" + round_ids_file_name)
     write_match_stats_to_csv(
         match_stats,
         "csv/" + tournament_name + "/" + round_ids_file_name.split(".")[0] + ".csv",
