@@ -1,6 +1,9 @@
+import argparse
 import csv
 
 from os import walk
+
+from tournament_constants import PRIMARY_CSV_COLUMNS
 
 
 def order_players_by_stat(tournament_name, stat_name):
@@ -26,3 +29,12 @@ def write_ranking_to_csv(tournament_name, stat_name):
         writer = csv.writer(csv_file)
         for key, value in sorted_dict.items():
             writer.writerow([key, value])
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("tournament_name", help="Tournament name like french2021.")
+    args = parser.parse_args()
+
+    for stat in PRIMARY_CSV_COLUMNS:
+        write_ranking_to_csv(args.tournament_name, stat)
